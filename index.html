@@ -34,12 +34,21 @@
                <h3>Exemple d'une structure HTML5 simple et efficace</h3>
                <article>
                     <h2 class="not-displayed">Structure de base</h2>
-                    <figure>
-                         <img src="./assets/img/structure.svg" alt="">
+                    <figure class="structure-container" id="html-container">
+                         <div class="struct header" id="header-div"><h4>header</h4></div>
+                         <div class="struct nav" id="nav-div"><h4>nav</h4></div>
+                         <div class="struct main" id="main-div"><h4>main</h4>
+                              <div class="struct sub-struct section" id="section-div"><h4>section</h4>
+                                   <div class="struct sub-struct article" id="article-div1"><h4>article</h4></div>
+                                   <div class="struct sub-struct article" id="article-div2"><h4>article</h4></div>
+                              </div>
+                              <div class="struct sub-struct aside" id="aside-div"><h4>aside</h4></div>
+                         </div>
+                         <div class="struct footer" id="footer-div"><h4>footer</h4></div>
                     </figure>
                     <aside>
-                         <ul>
-                              <li>
+                         <ul id="struct-elements">
+                              <li id="header-li">
                                    <h3>Header</h3>
                                    <p>
                                         Représente l'en-tête du site. <br>
@@ -47,7 +56,7 @@
                                    </p>
                               </li>
      
-                              <li>
+                              <li id="nav-li">
                                    <h3>Navigation</h3>
                                    <p>
                                         Contient le menu de navigation. <br>
@@ -58,7 +67,7 @@
                                    </p>
                               </li>
           
-                              <li>
+                              <li id="main-li">
                                    <h3>Main</h3>
                                    <p>
                                         Premier élement <strong>principal</strong> contenant le <strong>corps</strong> du site. <br>
@@ -69,7 +78,7 @@
                                    </p>
                               </li>
 
-                              <li>
+                              <li id="section-li">
                                    <h3>Section</h3>
                                    <p>
                                         Second élement <strong>principal</strong> comprennant les textes, images, ... 
@@ -78,8 +87,17 @@
                                         Un document HTML peut être composé de plusieurs sections.
                                    </p>
                               </li>
+
+                              <li id="article-li">
+                                   <h3>Article</h3>
+                                   <p>
+                                        Element contenant, comme son l'indique, un article. Il offre à l'utilisateur un ensemble
+                                        d'informations sous forme textuelle. <br>
+                                        Peut être composé de plusieurs <strong>paragraphes</strong> ou <strong>citations</strong>. <br>
+                                   </p>
+                              </li>
           
-                              <li>
+                              <li id="aside-li">
                                    <h3>Aside</h3>
                                    <p>
                                         Element <strong>secondaire</strong> offrant un complément d'information. <br>
@@ -87,7 +105,7 @@
                                    </p>
                               </li>
           
-                              <li>
+                              <li id="footer-li">
                                    <h3>Footer</h3>
                                    <p>
                                         Situé à la fin de la page, il fournit des informations complémentaires. <br>
@@ -107,5 +125,7 @@
      <footer>
          
      </footer>
+
+     <script src="assets/js/script.js"></script>
 </body>
 </html>

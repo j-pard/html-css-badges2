@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   outline: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  cursor: default; }
 
 body {
   overflow-x: hidden;
@@ -55,12 +56,48 @@ main {
       flex-direction: row;
       justify-content: space-between;
       align-items: stretch; }
-      main section article figure {
-        width: 50%; }
-        main section article figure img {
-          width: 100%;
-          height: auto;
-          max-height: 800px; }
+      main section article figure.structure-container {
+        width: 50%;
+        height: 700px;
+        border: 4px solid gray;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
+        background-color: #F6F6F6;
+        z-index: 1; }
+        main section article figure.structure-container div {
+          margin: 20px;
+          padding: 10px;
+          z-index: 2;
+          cursor: pointer;
+          transition: all .3s; }
+        main section article figure.structure-container h4 {
+          cursor: pointer; }
+        main section article figure.structure-container div.header, main section article figure.structure-container div.footer {
+          height: 80px; }
+        main section article figure.structure-container div.main {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: nowrap; }
+          main section article figure.structure-container div.main div.section {
+            width: 70%; }
+            main section article figure.structure-container div.main div.section div.article {
+              height: 90px; }
+          main section article figure.structure-container div.main div.aside {
+            width: 25%; }
+        main section article figure.structure-container div.struct {
+          border: 3px solid gray;
+          border-radius: 20px; }
+        main section article figure.structure-container div.sub-struct {
+          border: 2px solid gray;
+          border-radius: 20px; }
+        main section article figure.structure-container div.struct:hover {
+          border: 3px solid #5394fc;
+          border-radius: 20px; }
+        main section article figure.structure-container div.sub-struct:hover {
+          border: 2px solid #5394fc;
+          border-radius: 20px; }
       main section article aside {
         width: 45%; }
         main section article aside ul {
@@ -68,5 +105,10 @@ main {
           flex-direction: column;
           justify-content: space-around;
           height: 100%; }
+          main section article aside ul li {
+            transition: all .3s; }
+
+.unfocused {
+  opacity: 0.5; }
 
 /*# sourceMappingURL=style.css.map */
