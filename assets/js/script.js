@@ -19,15 +19,26 @@
 
       const focus = (id) => {
             document.getElementById(id).classList.remove("unfocused");
+            document.getElementById(id).style.fontSize = "110%";
       }
 
       const Unfocus = (id) => {
             document.getElementById(id).classList.add("unfocused");
+            document.getElementById(id).style.fontSize = "100%";
+      }
+
+      const addBackground = (id) => {
+            id.style.backgroundColor = "rgba(83, 148, 252, 0.1)";
+      }
+
+      const removeBackground = (id) => {
+            id.style.backgroundColor = "transparent";
       }
 
       const structCheck = () => {
             STRUCT_DIV.forEach(div => {
                   div.addEventListener("mouseenter", () => {
+                        addBackground(div);
                         switch (div.id) {
                               case "header-div" :
                                     focus("header-li");
@@ -56,6 +67,7 @@
                         }
                   });
                   div.addEventListener("mouseleave", () => {
+                        removeBackground(div);
                         switch (div.id) {
                               case "header-div" :
                                     Unfocus("header-li");
